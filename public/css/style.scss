@@ -1,0 +1,169 @@
+@import '_base';
+
+body {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+
+    aside {
+        width: 20%;
+        height: 100%;
+        background-color: #8DC2F7;
+        // border: 1px solid;
+
+        .logo {
+            width: 100%;
+            height: 15%;
+            cursor: pointer;
+            // border: 1px solid;
+        }
+
+        .menu {
+            width: 100%;
+            height: 75%;
+            // border: 1px solid;
+
+            nav {
+                width: 100%;
+                ul {
+                    width: 100%;
+                    li {
+                        width: 90%;
+                        height: 2.5rem;
+                        list-style: none;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 20px;
+                        text-transform: uppercase;
+                        // border: 1px solid;
+
+                        a {
+                            text-decoration: none;
+                            color: #F5F5F5;
+                            font-size: 16px;
+                            font-weight: 500;
+                            margin-left: 5%;  
+                        }
+                        &:hover {
+                            background-color: #F5F5F5;
+                            a {
+                                color: #8DC2F7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .logoutbtn {
+            width: 100%;
+            height: 10%;
+            // border: 1px solid;
+
+            button {
+                width: 12rem;
+                height: 3rem;
+                background-color: #0E4A87;
+                border: none;
+                border-radius: 7px;
+
+                a {
+                    color: #F5F5F5;
+                    text-decoration: none;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    main {
+        width: 79%;
+        height: 100%;
+        background-color: #F5F5F5;
+        // box-shadow: 10px 10px lightblue inset;
+
+        header {
+            width: 100%;
+            height: 8%;
+            background-color: #8DC2F7;
+            // border: 1px solid;
+
+            .profil {
+                width: 15rem;
+                height: 100%;
+                // border: 1px solid;
+
+                img {
+                    width: 42px;
+                    // height: 42px;
+                }
+            }
+
+            .role {
+                width: 13rem;
+                height: 100%;
+                // border: 1px solid;
+            }
+        }
+
+        section {
+            width: 100%;
+            height: 92%;
+            // border: 1px solid;
+
+            .boxs {
+                width: 100%;
+                height: 25%;
+                // border: 1px solid;
+
+                .box1 {
+                    width: 22%;
+                    height: 85%;
+                    background-color: #FFF;
+                    border: 1px solid #c6c6c6;
+                    border-radius: 10px;
+                    padding-left: 2%;
+
+                    span {
+                        font-size: 40px;
+                    }
+                }
+            }
+            .table1 {
+                position: absolute;
+                top: 35%;
+                right: 0%;
+                border-collapse: collapse;
+                width: 78%;
+                height: auto;
+                box-shadow: 5px 5px 5px 1px rgb(70, 130, 180);
+                // overflow-y: hidden;
+                
+                .th1 {
+                    height: 3rem;
+                    font-size: 1.2rem;
+                    color: #fff;
+                    background-color: rgb(70, 130, 180);
+                    border: 1px solid #dddddd;
+                    text-align: center;
+                    /* padding-left: 10px; */
+                }
+                .td1 {
+                    height: 3rem;   
+                    font-size: 1.2rem;
+                    border: 1px solid #dddddd;
+                    // text-align: center;
+                    padding-left: 10px;
+                }
+                .tr1{
+                    &:nth-child(odd) {
+                        background-color: rgb(209, 236, 246);
+                    }
+                    &:hover {
+                        background-color: rgb(222, 240, 247);
+                    }
+                }
+            }
+        }
+    }
+}

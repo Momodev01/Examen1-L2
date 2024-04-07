@@ -1,0 +1,54 @@
+@import '_base';
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifu;
+}
+.log-form {
+    height: 70%;
+    // border: 1px solid;
+    border-radius: 10px;
+    background-color: #8DC2F7;
+
+    h1{
+        color: #FFF;
+    }
+    .log-child {
+       width: 68%;
+
+       label{
+        font-size: 1.3rem;
+       }
+       input {
+        width: 100%;
+        height: 2.5rem;
+        padding: 2%;
+        font-size: 15px;
+        border: none;
+        text-align: center;
+        border-radius: 10px;
+        outline: none;
+       }
+       button {
+        width: 100%;
+        height: 2.5rem;
+        border: none;
+        border-radius: 10px;
+        color: #FFF;
+        font-size: 18px;
+        background-color: #0E4A87;
+        cursor: pointer;
+       }
+    //    .nodecobtn {
+    //     border: none;
+    //     background: none;
+    //         a {color: #FFF;}
+    //     } 
+    }
+    p>a{
+        color: #FFF;
+    }
+    
+}

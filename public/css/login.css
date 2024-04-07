@@ -1,0 +1,404 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.ai-start {
+  align-items: flex-start;
+}
+
+.aic {
+  align-items: center;
+}
+
+.ai-end {
+  align-items: flex-end;
+}
+
+.jc-start {
+  justify-content: flex-start;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.jc-se {
+  justify-content: space-evenly;
+}
+
+.jc-sa {
+  justify-content: space-around;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+.col-xs-1 {
+  width: 8.33%;
+}
+
+.col-xs-2 {
+  width: 16.66%;
+}
+
+.col-xs-3 {
+  width: 25%;
+}
+
+.col-xs-4 {
+  width: 33.33%;
+}
+
+.col-xs-5 {
+  width: 41.66%;
+}
+
+.col-xs-6 {
+  width: 50%;
+}
+
+.col-xs-7 {
+  width: 58.33%;
+}
+
+.col-xs-8 {
+  width: 66.66%;
+}
+
+.col-xs-9 {
+  width: 75%;
+}
+
+.col-xs-10 {
+  width: 83.33%;
+}
+
+.col-xs-11 {
+  width: 91.66%;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+.col-sm-1 {
+  width: 8.33%;
+}
+
+.col-sm-2 {
+  width: 16.66%;
+}
+
+.col-sm-3 {
+  width: 25%;
+}
+
+.col-sm-4 {
+  width: 33.33%;
+}
+
+.col-sm-5 {
+  width: 41.66%;
+}
+
+.col-sm-6 {
+  width: 50%;
+}
+
+.col-sm-7 {
+  width: 58.33%;
+}
+
+.col-sm-8 {
+  width: 66.66%;
+}
+
+.col-sm-9 {
+  width: 75%;
+}
+
+.col-sm-10 {
+  width: 83.33%;
+}
+
+.col-sm-11 {
+  width: 91.66%;
+}
+
+.col-sm-12 {
+  width: 100%;
+}
+
+.col-md-1 {
+  width: 8.33%;
+}
+
+.col-md-2 {
+  width: 16.66%;
+}
+
+.col-md-3 {
+  width: 23%;
+}
+
+.col-md-4 {
+  width: 33.33%;
+}
+
+.col-md-5 {
+  width: 41.66%;
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+.col-md-7 {
+  width: 58.33%;
+}
+
+.col-md-8 {
+  width: 66.66%;
+}
+
+.col-md-9 {
+  width: 75%;
+}
+
+.col-md-10 {
+  width: 83.33%;
+}
+
+.col-md-11 {
+  width: 91.66%;
+}
+
+.col-md-12 {
+  width: 100%;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+.col-lg-1 {
+  width: 8.33%;
+}
+
+.col-lg-2 {
+  width: 16.66%;
+}
+
+.col-lg-3 {
+  width: 25%;
+}
+
+.col-lg-4 {
+  width: 33.33%;
+}
+
+.col-lg-5 {
+  width: 41.66%;
+}
+
+.col-lg-6 {
+  width: 50%;
+}
+
+.col-lg-7 {
+  width: 58.33%;
+}
+
+.col-lg-8 {
+  width: 66.66%;
+}
+
+.col-lg-9 {
+  width: 75%;
+}
+
+.col-lg-10 {
+  width: 83.33%;
+}
+
+.col-lg-11 {
+  width: 91.66%;
+}
+
+.col-lg-12 {
+  width: 100%;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+.col-xl-1 {
+  width: 8.33%;
+}
+
+.col-xl-2 {
+  width: 16.66%;
+}
+
+.col-xl-3 {
+  width: 25%;
+}
+
+.col-xl-4 {
+  width: 33.33%;
+}
+
+.col-xl-5 {
+  width: 41.66%;
+}
+
+.col-xl-6 {
+  width: 50%;
+}
+
+.col-xl-7 {
+  width: 58.33%;
+}
+
+.col-xl-8 {
+  width: 66.66%;
+}
+
+.col-xl-9 {
+  width: 75%;
+}
+
+.col-xl-10 {
+  width: 83.33%;
+}
+
+.col-xl-11 {
+  width: 91.66%;
+}
+
+.col-xl-12 {
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serifu;
+}
+
+.log-form {
+  height: 70%;
+  border-radius: 10px;
+  background-color: #8DC2F7;
+}
+.log-form h1 {
+  color: #FFF;
+}
+.log-form .log-child {
+  width: 68%;
+}
+.log-form .log-child label {
+  font-size: 1.3rem;
+}
+.log-form .log-child input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 2%;
+  font-size: 15px;
+  border: none;
+  text-align: center;
+  border-radius: 10px;
+  outline: none;
+}
+.log-form .log-child button {
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 10px;
+  color: #FFF;
+  font-size: 18px;
+  background-color: #0E4A87;
+  cursor: pointer;
+}
+.log-form p > a {
+  color: #FFF;
+}
+
+/*# sourceMappingURL=login.css.map */

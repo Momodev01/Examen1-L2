@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Database>
+   <Name>EMG_MCD</Name>
+   <Table>
+      <Name>role</Name>
+      <Column>
+         <Name>id_role</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>libelle_role</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>id_role</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>adresse</Name>
+      <Column>
+         <Name>id_adresse</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>numero_adresse</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>rue</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>code_postal</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>ville</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>pays</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>id_adresse</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>permis</Name>
+      <Column>
+         <Name>id_permis</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>type_permis</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>id_permis</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>type_vehicule</Name>
+      <Column>
+         <Name>id_type_vehicule</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>nom_type_vehicule</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_permis</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>id_type_vehicule</Key>
+      </PK>
+      <FK>
+         <Key>id_permis</Key>
+         <Reference>permis(id_permis)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>options</Name>
+      <Column>
+         <Name>id_options</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>libelle_options</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <PK>
+         <Key>id_options</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>marque</Name>
+      <Column>
+         <Name>id_marque</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>nom_marque</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>id_marque</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>modele</Name>
+      <Column>
+         <Name>id_modele</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>nom_modele</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>id_modele</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>mode_paiement</Name>
+      <Column>
+         <Name>id_mode_paiement</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>type_paiement</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <PK>
+         <Key>id_mode_paiement</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>categorie</Name>
+      <Column>
+         <Name>id_categorie</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>nom_categorie</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>prix_location_jour</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>prix_location_kilometre</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>caution_location</Name>
+         <Type>CURRENCY</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>id_categorie</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>etat</Name>
+      <Column>
+         <Name>id_etat</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>nom_etat</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>id_etat</Key>
+      </PK>
+   </Table>
+   <Table>
+      <Name>vehicule</Name>
+      <Column>
+         <Name>id_vehicule</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>immatriculation</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL UNIQUE</Property>
+      </Column>
+      <Column>
+         <Name>kilometrage</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>volume</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>charge_max</Name>
+         <Type>VARCHAR(50)</Type>
+      </Column>
+      <Column>
+         <Name>longueur</Name>
+         <Type>REAL</Type>
+      </Column>
+      <Column>
+         <Name>largeur</Name>
+         <Type>REAL</Type>
+      </Column>
+      <Column>
+         <Name>hauteur</Name>
+         <Type>REAL</Type>
+      </Column>
+      <Column>
+         <Name>id_options</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_etat</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_categorie</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_marque</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_modele</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_type_vehicule</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>id_vehicule</Key>
+      </PK>
+      <AK>
+         <Key>id_type_vehicule</Key>
+      </AK>
+      <AK>
+         <Key>immatriculation</Key>
+      </AK>
+      <FK>
+         <Key>id_options</Key>
+         <Reference>options(id_options)</Reference>
+      </FK>
+      <FK>
+         <Key>id_etat</Key>
+         <Reference>etat(id_etat)</Reference>
+      </FK>
+      <FK>
+         <Key>id_categorie</Key>
+         <Reference>categorie(id_categorie)</Reference>
+      </FK>
+      <FK>
+         <Key>id_marque</Key>
+         <Reference>marque(id_marque)</Reference>
+      </FK>
+      <FK>
+         <Key>id_modele</Key>
+         <Reference>modele(id_modele)</Reference>
+      </FK>
+      <FK>
+         <Key>id_type_vehicule</Key>
+         <Reference>type_vehicule(id_type_vehicule)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>users</Name>
+      <Column>
+         <Name>id_user</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>nom_user</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>prenom_user</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>login</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL UNIQUE</Property>
+      </Column>
+      <Column>
+         <Name>password</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>tel_user</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_adresse</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_role</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>id_user</Key>
+      </PK>
+      <AK>
+         <Key>login</Key>
+      </AK>
+      <FK>
+         <Key>id_adresse</Key>
+         <Reference>adresse(id_adresse)</Reference>
+      </FK>
+      <FK>
+         <Key>id_role</Key>
+         <Reference>role(id_role)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>conducteur</Name>
+      <Column>
+         <Name>id_conducteur</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>nom_conducteur</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>prenom_conducteur</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>tel_conducteur</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_adresse</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_permis</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>id_conducteur</Key>
+      </PK>
+      <FK>
+         <Key>id_adresse</Key>
+         <Reference>adresse(id_adresse)</Reference>
+      </FK>
+      <FK>
+         <Key>id_permis</Key>
+         <Reference>permis(id_permis)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>paiement</Name>
+      <Column>
+         <Name>id_paiement</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>montant_paiement</Name>
+         <Type>CURRENCY</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_mode_paiement</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <PK>
+         <Key>id_paiement</Key>
+      </PK>
+      <FK>
+         <Key>id_mode_paiement</Key>
+         <Reference>mode_paiement(id_mode_paiement)</Reference>
+      </FK>
+   </Table>
+   <Table>
+      <Name>reservation</Name>
+      <Column>
+         <Name>id_reservation</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>date_debut_location</Name>
+         <Type>DATE</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>date_fin_location</Name>
+         <Type>DATE</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>kilometres_parcourus</Name>
+         <Type>VARCHAR(50)</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>montant_total</Name>
+         <Type>CURRENCY</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_user</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_paiement</Name>
+         <Type>INT</Type>
+      </Column>
+      <Column>
+         <Name>id_modele</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_marque</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_options</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_vehicule</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_categorie</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_etat</Name>
+         <Type>INT</Type>
+         <Property>NOT NULL</Property>
+      </Column>
+      <Column>
+         <Name>id_conducteur</Name>
+         <Type>INT</Type>
+      </Column>
+      <PK>
+         <Key>id_reservation</Key>
+      </PK>
+      <FK>
+         <Key>id_user</Key>
+         <Reference>users(id_user)</Reference>
+      </FK>
+      <FK>
+         <Key>id_paiement</Key>
+         <Reference>paiement(id_paiement)</Reference>
+      </FK>
+      <FK>
+         <Key>id_modele</Key>
+         <Reference>modele(id_modele)</Reference>
+      </FK>
+      <FK>
+         <Key>id_marque</Key>
+         <Reference>marque(id_marque)</Reference>
+      </FK>
+      <FK>
+         <Key>id_options</Key>
+         <Reference>options(id_options)</Reference>
+      </FK>
+      <FK>
+         <Key>id_vehicule</Key>
+         <Reference>vehicule(id_vehicule)</Reference>
+      </FK>
+      <FK>
+         <Key>id_categorie</Key>
+         <Reference>categorie(id_categorie)</Reference>
+      </FK>
+      <FK>
+         <Key>id_etat</Key>
+         <Reference>etat(id_etat)</Reference>
+      </FK>
+      <FK>
+         <Key>id_conducteur</Key>
+         <Reference>conducteur(id_conducteur)</Reference>
+      </FK>
+   </Table>
+</Database>
