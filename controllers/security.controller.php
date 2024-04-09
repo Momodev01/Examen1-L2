@@ -16,13 +16,13 @@ if (isset($_REQUEST["action"])) {
             $username = $_POST['username'];
             $password = $_POST['passwd'];
             $userConnect = connexion($username, $password);
-            // $_SESSION['userConnect'] = $userConnect;
+            $_SESSION['userConnect'] = $userConnect;
             // dd($_SESSION); 
             // Vérifier si la connexion a réussi
             if ($userConnect != null) {
                 if ($userConnect['id_role'] == 1) {
                     $_SESSION['userConnect'] = $userConnect; 
-                    loadView('administrator/gesboard'); 
+                    require_once('../controllers/admin.controller.php'); 
                 }
                 else if ($userConnect['id_role'] == 2) {
                     $_SESSION['userConnect'] = $userConnect;
