@@ -9,12 +9,10 @@
 </head>
 <body>
     
-<?php
-    
-    require_once("../view/partials/menu.html.php");
-    echo $contentForView;
-
-?>
+    <?php
+        require_once("../view/partials/menu.html.php");
+        echo $contentForView;
+    ?>
 
 </body>
 </html>

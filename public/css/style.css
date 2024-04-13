@@ -460,26 +460,48 @@ body main section .boxs .box1 {
 body main section .boxs .box1 span {
   font-size: 40px;
 }
+body main section .titleH1 {
+  width: 100%;
+  height: 5rem;
+  padding: 0 15px 0 15px;
+}
+body main section .titleH1 button {
+  width: 8rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(70, 130, 180);
+}
+body main section .titleH1 button a {
+  color: #FFF;
+  text-decoration: none;
+}
+body main section .titleH1 button:hover {
+  background-color: rgb(187, 219, 231);
+}
+body main section .titleH1 button:hover a {
+  color: black;
+}
 body main section .table1 {
   border-collapse: collapse;
-  width: 98%;
-  margin-left: 1%;
+  width: 100%;
   height: auto;
   box-shadow: 5px 5px 5px 1px rgb(70, 130, 180);
 }
 body main section .table1 .th1 {
   height: 3rem;
   font-size: 1.2rem;
-  color: #fff;
+  color: #FFF;
   background-color: rgb(70, 130, 180);
-  border: 1px solid #dddddd;
+  border: 1px solid #DDDDDD;
   text-align: center;
   /* padding-left: 10px; */
 }
 body main section .table1 .td1 {
   height: 3rem;
   font-size: 1.2rem;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDDDDD;
   padding-left: 10px;
 }
 body main section .table1 .tr1:nth-child(odd) {

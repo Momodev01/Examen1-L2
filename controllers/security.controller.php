@@ -41,5 +41,5 @@ if (isset($_REQUEST["action"])) {
 }  
 else{
     // Page par défaut
-    require_once("../security/login.html.php");
+    require_once("../view/layout/connexion.layout.php");
 }

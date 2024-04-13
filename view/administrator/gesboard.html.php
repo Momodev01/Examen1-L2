@@ -1,14 +1,8 @@
 
 <main class="">
-    <header class="flex jc-sb aic">
-        <div class="profil flex jc-se aic">
-            <img src="../images/persona.png" alt="">
-            <p> Momo Diallo </p>
-        </div>
-        <div class="role flex jcc aic">
-            <p> Gestionnaire </p>
-        </div>
-    </header>
+    <?php
+        require_once('../view/partials/header.html.php');
+    ?>
     <section>
         <div class="boxs flex jc-se aic">
             <div class="box1 flex column jc-se">
@@ -24,8 +18,8 @@
                 <p> Marques </p>
             </div>
             <div class="box1 flex column jc-se">
-                <span> <?= $drivers[0]['drivers'] ?> </span>
-                <p> Conducteurs </p>
+                <span> <?= $models[0]['models'] ?> </span>
+                <p> Modèles </p>
             </div>
         </div>
 

@@ -15,27 +15,27 @@ $currentPage = 'accueil'; // ou 'produits', 'contact', etc., selon la page
                 </li>
                 <li> 
                     <img src="../images/directions_car.png" alt=""> 
-                    <a <?php if ($currentPage == 'voitures') echo 'class="active"'; ?> href="<?=path('admin', 'show-cars')?>"> Voitures </a> 
+                    <a <?php if ($currentPage == 'voitures') echo 'class="active"'; ?> href="<?=path('admin', 'cars')?>"> Voitures </a> 
                 </li>
                 <li> 
                     <img src="../images/local_shipping.png" alt=""> 
-                    <a <?php if ($currentPage == 'camions') echo 'class="active"'; ?> href="<?=path('admin', 'show-trucks')?>"> Camions </a> 
+                    <a <?php if ($currentPage == 'camions') echo 'class="active"'; ?> href="<?=path('admin', 'trucks')?>"> Camions </a> 
                 </li>
                 <li> 
                     <img src="../images/category.png" alt=""> 
-                    <a <?php if ($currentPage == 'categories') echo 'class="active"'; ?> href="<?=path('admin', 'show-categories')?>"> Catégories </a> 
+                    <a <?php if ($currentPage == 'categories') echo 'class="active"'; ?> href="<?=path('admin', 'category')?>"> Catégories </a> 
                 </li>
-                <li> 
+                <!-- <li> 
                     <img src="../images/search_hands_free.png" alt=""> 
-                    <a <?php if ($currentPage == 'marques') echo 'class="active"'; ?> href="<?=path('admin', 'show-marques')?>"> Marques </a> 
+                    <a <?php if ($currentPage == 'marques') echo 'class="active"'; ?> href="<?=path('admin', 'brands')?>"> Marques </a> 
                 </li>
                 <li> 
                     <img src="../images/model_training.png" alt=""> 
-                    <a <?php if ($currentPage == 'modeles') echo 'class="active"'; ?> href="<?=path('admin', 'show-models')?>"> Modèles </a> 
-                </li>
+                    <a <?php if ($currentPage == 'modeles') echo 'class="active"'; ?> href="<?=path('admin', 'modele')?>"> Modèles </a> 
+                </li> -->
                 <li> 
                     <img src="../images/drivers.png" alt=""> 
-                    <a <?php if ($currentPage == 'conducteurs') echo 'class="active"'; ?> href="<?=path('admin', 'show-drivers')?>"> Conducteurs </a> 
+                    <a <?php if ($currentPage == 'conducteurs') echo 'class="active"'; ?> href="<?=path('admin', 'drivers')?>"> Conducteurs </a> 
                 </li>
             </ul>
         </nav>

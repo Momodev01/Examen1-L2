@@ -260,6 +260,8 @@ CREATE TABLE vehicule (
     id_type_vehicule INT,
     id_marque INT,
     id_modele INT, 
+    id_categorie INT, 
+    id_options INT, 
     volume VARCHAR(50),
     charge_max VARCHAR(50),
     longueur REAL,
@@ -267,5 +269,9 @@ CREATE TABLE vehicule (
     hauteur REAL,
     FOREIGN KEY (id_type_vehicule) REFERENCES type_vehicule(id_type_vehicule),
     FOREIGN KEY (id_marque) REFERENCES marque(id_marque),
-    FOREIGN KEY (id_modele) REFERENCES modele(id_modele)
+    FOREIGN KEY (id_modele) REFERENCES modele(id_modele),
+    FOREIGN KEY (id_categorie) REFERENCES categorie(id_categorie),
+    FOREIGN KEY (id_options) REFERENCES options(id_options)
 );
+
+ALTER TABLE `vehicule` ADD `id_options` INT NOT NULL AFTER `id_categorie`;
