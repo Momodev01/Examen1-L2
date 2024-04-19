@@ -5,8 +5,7 @@
     <section>
         <div class="titleH1 flex jc-sb aic">
             <h1> Liste des voitures </h1>
-            <button> <a href="<? path('trucks', 'newCar') ?>"> Ajouter </a></button>
-
+            <button> <a href="<?= path('admin', 'newCar') ?>"> Ajouter </a> </button>
         </div>
         <div>
             <table class="table1">
@@ -25,7 +24,7 @@
                     <td class="td1"> <?= $car["immatriculation"] ?> </td>
                     <td class="td1"> <?= $car["kilometrage"] ?> </td>
                     <td class="td1"> <?= $car["libelle_options"] ?> </td>
-                    <td class="td1"> <a href=""> Modifier </a> </td>
+                    <td class="td1 details"> <a href=""> Voir plus... </a> </td>
                 </tr>
                 <?php endforeach?>
             </table>

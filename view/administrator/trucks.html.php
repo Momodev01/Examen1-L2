@@ -5,7 +5,7 @@
     <section>
         <div class="titleH1 flex jc-sb aic">
             <h1> Liste des camions </h1>
-            <button> <a href="<? path('trucks', 'newTruck') ?>"> Ajouter </a></button>
+            <button> <a href="<?= path('admin', 'newCar') ?>"> Ajouter </a></button>
         </div>
         <div>
             <table class="table1">
@@ -24,7 +24,7 @@
                     <td class="td1"> <?= $truck["immatriculation"] ?> </td>
                     <td class="td1"> <?= $truck["volume"] ?> m³ </td>
                     <td class="td1"> <?= $truck["charge_max"] ?> kg </td>
-                    <td class="td1"> <a href=""> Modifier </a> </td>
+                    <td class="td1 details"> <a href=""> Voir plus... </a> </td>
                 </tr>
                 <?php endforeach?>
             </table>

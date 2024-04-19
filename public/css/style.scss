@@ -111,6 +111,47 @@ body {
             height: 92%;
             // border: 1px solid;
 
+            .boxes {
+                width: 95%;
+                height: 80%;
+                // border: 1px solid;
+                box-shadow: 5px 5px 15px 5px rgb(70, 130, 180);
+                .boxe1 {
+                    width: 30%;
+                    height: 10rem;
+                    border: 1px solid rgb(198, 198, 198);
+                    border-radius: 10px;
+                    padding-left: 2%;
+
+                    &:nth-child(1) {
+                        background-color: rgb(250, 235, 215);
+                        box-shadow: 2px 2px 2px 2px rgb(230, 230, 217);
+                    }
+                    &:nth-child(2) {
+                        background-color: rgb(180, 206, 233);
+                        box-shadow: 2px 2px 2px 2px rgb(160, 200, 235);
+                    }
+                    &:nth-child(3) {
+                        background-color: rgb(247, 213, 213);
+                        box-shadow: 2px 2px 2px 2px rgb(243, 202, 202);
+                    }
+                    &:nth-child(4) {
+                        background-color: rgb(248, 248, 229);
+                        box-shadow: 2px 2px 2px 2px rgb(228, 240, 230);
+                    }
+                    &:nth-child(5) {
+                        background-color: rgb(241, 232, 156);
+                        box-shadow: 2px 2px 2px 2px rgb(225, 225, 160);
+                    }
+                    &:nth-child(6) {
+                        background-color: rgb(141, 238, 184);
+                        box-shadow: 2px 2px 2px 2px rgb(125, 230, 190);
+                    }
+                    span {
+                        font-size: 40px;
+                    }
+                }
+            }
             .boxs {
                 width: 100%;
                 height: 25%;
@@ -185,6 +226,9 @@ body {
                     &:hover {
                         background-color: rgb(222, 240, 247);
                     }
+                }
+                .details {
+                    font-size: 1rem;
                 }
             }
         }

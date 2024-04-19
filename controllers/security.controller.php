@@ -17,20 +17,23 @@ if (isset($_REQUEST["action"])) {
             $password = $_POST['passwd'];
             $userConnect = connexion($username, $password);
             $_SESSION['userConnect'] = $userConnect;
-            // dd($_SESSION); 
+            // dd($_SESSION['userConnect']); 
             // Vérifier si la connexion a réussi
             if ($userConnect != null) {
                 if ($userConnect['id_role'] == 1) {
                     $_SESSION['userConnect'] = $userConnect; 
+                    // loadView('administrator/gesboard');
                     require_once('../controllers/admin.controller.php'); 
                 }
                 else if ($userConnect['id_role'] == 2) {
                     $_SESSION['userConnect'] = $userConnect;
-                    loadView('manager_resev/managerboard');   
+                    // loadView('manager_reserv/managerboard');   
+                    require_once('../controllers/respo.controller.php'); 
                 }
                 else if ($userConnect['id_role'] == 3) {
                     $_SESSION['userConnect'] = $userConnect;
-                    loadView('customer/dashboard'); 
+                    // loadView('customer/dashboard'); 
+                    require_once('../controllers/client.controller.php'); 
                 }
             }
             else{

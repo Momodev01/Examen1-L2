@@ -1,0 +1,88 @@
+@import '_base';
+
+body {
+    font-family: "Poppins", sans-serif;
+    
+    fieldset {
+        width: 80%;
+        height: 40rem;
+        margin-left: 10%;
+        border-radius: 10px;
+        
+        .form1Leg {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .form1 {
+            width: 100%;
+            height: 100%;
+            // border: 1px solid #ccc;
+            border-radius: 5px;
+        
+            .container {
+                width: 70%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // border: 1px solid;
+
+                label {
+                    display: block;
+                }
+            
+                input {
+                    width: 20rem;
+                    padding: 8px;
+                    border: 1px solid #ccc;
+                    border-radius: 3px;
+                    box-sizing: border-box;
+                    font-size: 16px;
+                    outline: none;
+                    // margin-left: 10px;
+                }
+
+            }
+            select {
+                width: 70%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                box-sizing: border-box;
+                font-size: 16px;
+                outline: none;
+            }
+        
+            button {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 3px;
+                background-color: #007bff;
+                color: #fff;
+                transition: background-color 0.3s;
+                cursor: pointer;
+            
+                &:hover {
+                    background-color: #0056b3;
+                }
+            
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
+    .form2 {
+        width: 35%;
+        // border: 1px solid;
+        
+        input {
+            width: 60%;
+            padding-left: 10px;
+            font-size: 1rem;
+            outline: none;
+        }
+    }   
+}

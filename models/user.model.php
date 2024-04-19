@@ -15,3 +15,17 @@ function findProfil() {
             WHERE users.`id_role` = role.`id_role`";
     return executeSelect($sql);
 }
+
+// function mergeUserRole():array {
+//     $users = findAllUsers();
+//     $userRole = [];
+//     foreach ($users as $user) {
+//         if ($user['id_role'] == 1) {
+//             $roles = findAllRoles();
+//             $mergeUserRole = array_merge($roles, $user);
+//             $userRole[] = $mergeUserRole;
+//         }
+//         return $userRole;
+        
+//     }
+// }

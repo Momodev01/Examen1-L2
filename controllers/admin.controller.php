@@ -1,8 +1,8 @@
 <?php
 
 if (isset($_REQUEST['action'])) {
-    $profil = findProfil();
-    // dd( $profil[0]['nom_user'] );
+    $profil = $_SESSION['userConnect'];
+    // dd( $profil);
     if ($_REQUEST['action'] == "dashboard") {
         $cars = cars();
         $trucks = trucks();
@@ -20,8 +20,9 @@ if (isset($_REQUEST['action'])) {
         $models = models();
         $drivers = drivers();
         $carsList = findAllCars();
-        // dd('$cars');
-        loadView('administrator/cars', ["cars" => $cars, "trucks" => $trucks, "brands" => $brands, "models" => $models, "drivers" => $drivers, "carsList" => $carsList, "profil" => $profil]);
+        $brandNames = findAllMarques();
+        // dd($brandNames);
+        loadView('administrator/cars', ["cars" => $cars, "trucks" => $trucks, "brands" => $brands, "models" => $models, "drivers" => $drivers, "carsList" => $carsList, "brandNames" => $brandNames, "profil" => $profil]);
     }
     elseif ($_REQUEST['action'] == "trucks") {
         $cars = cars();
@@ -51,8 +52,9 @@ if (isset($_REQUEST['action'])) {
         $models = models();
         $drivers = drivers();
         $vehicules = findVehicule();
+        $brandNames = findAllMarques();
         // dd('$cars');
-        loadView('administrator/brands', ["cars" => $cars, "trucks" => $trucks, "brands" => $brands, "models" => $models, "drivers" => $drivers, "vehicules" => $vehicules, "profil" => $profil]);
+        loadView('administrator/brands', ["cars" => $cars, "trucks" => $trucks, "brands" => $brands, "models" => $models, "drivers" => $drivers, "vehicules" => $vehicules, "brandNames" => $brandNames, "profil" => $profil]);
     }
     elseif ($_REQUEST['action'] == "modele") {
         $cars = cars();
@@ -61,8 +63,9 @@ if (isset($_REQUEST['action'])) {
         $models = models();
         $drivers = drivers();
         $vehicules = findVehicule();
+        $ModelNames = findAllModels();
         // dd('$cars');
-        loadView('administrator/models', ["cars" => $cars, "trucks" => $trucks, "brands" => $brands, "models" => $models, "drivers" => $drivers, "vehicules" => $vehicules, "profil" => $profil]);
+        loadView('administrator/models', ["cars" => $cars, "trucks" => $trucks, "brands" => $brands, "models" => $models, "drivers" => $drivers, "vehicules" => $vehicules, "ModelNames" => $ModelNames, "profil" => $profil]);
     }
     elseif ($_REQUEST['action'] == "drivers") {
         $cars = cars();
@@ -75,8 +78,28 @@ if (isset($_REQUEST['action'])) {
         // dd('$cars');
         loadView('administrator/drivers', ["cars" => $cars, "trucks" => $trucks, "brands" => $brands, "models" => $models, "drivers" => $drivers, "driversList" => $driversList, "profil" => $profil]);
     }
+    elseif ($_REQUEST['action'] == "newCar") {
+        $type_vehicule = findTypes();
+        $ctgList = ctgNames();
+        loadView('administrator/newCar', ['type_vehicule' => $type_vehicule, "ctgList" => $ctgList, "profil" => $profil]);
+    }
+    elseif ($_REQUEST['action'] == "addBrand") {
+        unset($_POST["controller"]);
+        unset($_POST["action"]);
+        // dd($_POST);
+        AddBrand($_POST);
+        redirectToRoot("admin", "brands");
+    }
+    elseif ($_REQUEST['action'] == "addModele") {
+        unset($_POST["controller"]);
+        unset($_POST["action"]);
+        // dd($_POST);
+        AddModel($_POST);
+        redirectToRoot("admin", "modele");
+    }
     else {
-        $profil = findProfil();
+        $profil = $_SESSION['userConnect'];
+        // dd($profil['nom_user']);
         $cars = cars();
         $trucks = trucks();
         $brands = brands();
@@ -85,8 +108,9 @@ if (isset($_REQUEST['action'])) {
         $vehicules = findVehicule();
         // dd('$cars');
         loadView('administrator/gesboard', ["cars" => $cars, "trucks" => $trucks, "brands" => $brands, "models" => $models, "drivers" => $drivers, "vehicules" => $vehicules, "profil" => $profil]);
-    } 
+    }
 }
-else {
-    # code...
-}
+// else {
+//     header("location:".WEBROOT);
+//     exit;
+// }
